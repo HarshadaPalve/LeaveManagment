@@ -89,8 +89,7 @@ public class LeaveControllerTest {
     public void lapseYearEndLeavesTest() {
         String expectedResponse = "All Leaves are lapsed";
         when(leaveService.lapseYearEndLeaves(any())).thenReturn(expectedResponse);
-        String response = leaveService.lapseYearEndLeaves(Calendar.getInstance());
+        String response = leaveController.lapseLeaves();
         assertEquals(expectedResponse, response);
     }
-
 }
